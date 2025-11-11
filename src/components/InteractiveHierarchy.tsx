@@ -4,12 +4,26 @@ import { Label } from './ui/label';
 import { Switch } from './ui/switch';
 import { Separator } from './ui/separator';
 import { Badge } from './ui/badge';
-import { AlertTriangle, Bell, Search } from 'lucide-react';
+import { AlertTriangle, Bell, Search, User, ClipboardCheck, Package, Users, Home, MapPin } from 'lucide-react';
 
 export function InteractiveHierarchy() {
   const [showHierarchy, setShowHierarchy] = useState(false);
   const [useProperSizes, setUseProperSizes] = useState(true);
   const [useContrast, setUseContrast] = useState(true);
+
+  const quickActions = [
+    { label: 'Plan', icon: ClipboardCheck },
+    { label: 'Supplies', icon: Package },
+    { label: 'Contacts', icon: Users },
+    { label: 'Shelters', icon: Home }
+  ];
+
+  const quickLinks = [
+    { label: 'Plan', icon: ClipboardCheck },
+    { label: 'Supplies', icon: Package },
+    { label: 'Contacts', icon: Users },
+    { label: 'Map', icon: MapPin }
+  ];
 
   return (
     <div className="space-y-6">
@@ -90,7 +104,7 @@ export function InteractiveHierarchy() {
                 <h2 
                   className={`${useProperSizes ? '' : 'text-base'} ${useContrast ? 'text-gray-900' : 'text-gray-400'}`}
                 >
-                  ReadyNow
+                  HandaKNB?
                 </h2>
               </div>
               <div className="flex gap-2">
@@ -144,14 +158,14 @@ export function InteractiveHierarchy() {
                 Quick Actions
               </h3>
               <div className="grid grid-cols-4 gap-3">
-                {['Plan', 'Supplies', 'Contacts', 'Shelters'].map((category) => (
+                {quickActions.map(({ label, icon: Icon }) => (
                   <button 
-                    key={category}
+                    key={label}
                     className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
                   >
-                    <div className="w-8 h-8 bg-gray-200 rounded-full mx-auto mb-2"></div>
+                    <Icon className="w-6 h-6 mx-auto mb-2 text-gray-700" aria-hidden="true" />
                     <p className="text-gray-700">
-                      {category}
+                      {label}
                     </p>
                   </button>
                 ))}
@@ -183,6 +197,78 @@ export function InteractiveHierarchy() {
                 </div>
               </div>
             )}
+          </div>
+        </Card>
+
+        <h3 className="text-indigo-900 mt-8 mb-4">Alternative Example: Home Screen with Profile</h3>
+        <Card className="overflow-hidden">
+          <div className="bg-white p-6">
+            {/* Header with visible profile button */}
+            <div className={`flex items-center justify-between mb-6 ${showHierarchy ? 'ring-2 ring-purple-400 ring-offset-2' : ''}`}>
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-indigo-600 rounded-full flex items-center justify-center">
+                  <AlertTriangle className="w-5 h-5 text-white" />
+                </div>
+                <h2 
+                  className={`${useProperSizes ? '' : 'text-base'} ${useContrast ? 'text-gray-900' : 'text-gray-400'}`}
+                >
+                  HandaKNB?
+                </h2>
+              </div>
+              <div className="flex gap-2">
+                <button 
+                  className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+                  aria-label="Search"
+                >
+                  <Search className="w-5 h-5 text-gray-600" />
+                </button>
+                <button 
+                  className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+                  aria-label="Notifications"
+                >
+                  <Bell className="w-5 h-5 text-gray-600" />
+                </button>
+                <button 
+                  className="p-2 hover:bg-gray-100 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-600"
+                  aria-label="Open profile"
+                >
+                  <User className="w-5 h-5 text-gray-700" />
+                </button>
+              </div>
+            </div>
+
+            {/* Primary callout */}
+            <div className={`mb-6 ${showHierarchy ? 'ring-2 ring-blue-400 ring-offset-2' : ''}`}>
+              <h1 className={`${useProperSizes ? '' : 'text-lg'} ${useContrast ? 'text-gray-900' : 'text-gray-400'} mb-1`}>
+                Find Nearby Shelters
+              </h1>
+              <p className="text-gray-600">3 open shelters within 5 miles • Capacity updated 10 mins ago</p>
+            </div>
+
+            {/* Secondary action */}
+            <div className={`bg-gradient-to-r from-indigo-500 to-purple-600 rounded-xl p-6 mb-6 ${showHierarchy ? 'ring-2 ring-green-400 ring-offset-2' : ''}`}>
+              <Badge className="bg-yellow-400 text-gray-900 mb-2">Recommended</Badge>
+              <h3 className="text-white mb-2">Backup Power Checklist</h3>
+              <p className="text-indigo-100 mb-4">Prepare batteries, charge packs, and safe generator setup</p>
+              <button className="bg-white text-indigo-600 px-6 py-2 rounded-lg hover:bg-indigo-50 transition-colors">
+                Start Checklist
+              </button>
+            </div>
+
+            {/* Quick links */}
+            <div className={`${showHierarchy ? 'ring-2 ring-orange-400 ring-offset-2' : ''}`}>
+              <h3 className={`${useProperSizes ? '' : 'text-base'} ${useContrast ? 'text-gray-900' : 'text-gray-500'} mb-3`}>
+                Quick Links
+              </h3>
+              <div className="grid grid-cols-4 gap-3">
+                {quickLinks.map(({ label, icon: Icon }) => (
+                  <button key={label} className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                    <Icon className="w-6 h-6 mx-auto mb-2 text-gray-700" aria-hidden="true" />
+                    <p className="text-gray-700">{label}</p>
+                  </button>
+                ))}
+              </div>
+            </div>
           </div>
         </Card>
       </div>

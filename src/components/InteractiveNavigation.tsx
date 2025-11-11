@@ -89,7 +89,7 @@ export function InteractiveNavigation() {
               {navPattern === 'top-nav' && (
                 <div className="bg-indigo-600 text-white p-4 shadow-md">
                   <div className="flex items-center justify-between mb-4">
-                    <h2>ReadyNow</h2>
+                    <h2>HandaKNB?</h2>
                     <button className="p-2 hover:bg-indigo-700 rounded-full transition-colors" aria-label="Notifications">
                       <Bell className="w-5 h-5" />
                     </button>
