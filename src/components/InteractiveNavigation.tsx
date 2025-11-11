@@ -3,13 +3,13 @@ import { Card } from './ui/card';
 import { Label } from './ui/label';
 import { RadioGroup, RadioGroupItem } from './ui/radio-group';
 import { Separator } from './ui/separator';
-import { Home, Search, PlusCircle, Bell, User, Menu, ChevronLeft } from 'lucide-react';
+import { Home, Search, Bell, User, Menu, ChevronLeft, MapPin } from 'lucide-react';
 
 type NavPattern = 'bottom-nav' | 'top-nav' | 'hamburger';
 
 export function InteractiveNavigation() {
   const [navPattern, setNavPattern] = useState<NavPattern>('bottom-nav');
-  const [activeTab, setActiveTab] = useState('home');
+  const [activeTab, setActiveTab] = useState('plan');
 
   return (
     <div className="space-y-6">
@@ -80,7 +80,7 @@ export function InteractiveNavigation() {
       <Separator />
 
       <div>
-        <h3 className="text-indigo-900 mb-4">Interactive Example</h3>
+        <h3 className="text-indigo-900 mb-4">Interactive Example: Preparedness App Navigation</h3>
         <div className="max-w-md mx-auto">
           <Card className="overflow-hidden">
             {/* Phone mockup */}
@@ -89,14 +89,14 @@ export function InteractiveNavigation() {
               {navPattern === 'top-nav' && (
                 <div className="bg-indigo-600 text-white p-4 shadow-md">
                   <div className="flex items-center justify-between mb-4">
-                    <h2>MyApp</h2>
+                    <h2>ReadyNow</h2>
                     <button className="p-2 hover:bg-indigo-700 rounded-full transition-colors" aria-label="Notifications">
                       <Bell className="w-5 h-5" />
                     </button>
                   </div>
                   <nav>
                     <ul className="flex gap-6">
-                      {['Home', 'Explore', 'Profile'].map((item) => (
+                      {['Plan', 'Supplies', 'Alerts'].map((item) => (
                         <li key={item}>
                           <button 
                             className={`pb-2 border-b-2 transition-colors ${
@@ -134,12 +134,11 @@ export function InteractiveNavigation() {
               <div className="flex-1 bg-gray-50 p-6 overflow-auto">
                 <div className="space-y-4">
                   <h2 className="text-gray-900">
-                    {activeTab === 'home' && 'Home Feed'}
-                    {activeTab === 'search' && 'Search & Discover'}
-                    {activeTab === 'create' && 'Create New Post'}
-                    {activeTab === 'notifications' && 'Notifications'}
+                    {activeTab === 'plan' && 'Your Emergency Plan'}
+                    {activeTab === 'supplies' && 'Supplies & Checklists'}
+                    {activeTab === 'alerts' && 'Active Alerts'}
+                    {activeTab === 'shelters' && 'Nearby Shelters'}
                     {activeTab === 'profile' && 'Your Profile'}
-                    {activeTab === 'explore' && 'Explore'}
                   </h2>
                   <div className="space-y-3">
                     {[1, 2, 3].map((i) => (
@@ -164,10 +163,10 @@ export function InteractiveNavigation() {
                 <nav className="bg-white border-t border-gray-200 shadow-lg" aria-label="Main navigation">
                   <ul className="flex justify-around py-2">
                     {[
-                      { id: 'home', icon: Home, label: 'Home' },
-                      { id: 'search', icon: Search, label: 'Search' },
-                      { id: 'create', icon: PlusCircle, label: 'Create' },
-                      { id: 'notifications', icon: Bell, label: 'Notifications' },
+                      { id: 'plan', icon: Home, label: 'Plan' },
+                      { id: 'supplies', icon: Search, label: 'Supplies' },
+                      { id: 'alerts', icon: Bell, label: 'Alerts' },
+                      { id: 'shelters', icon: MapPin, label: 'Shelters' },
                       { id: 'profile', icon: User, label: 'Profile' }
                     ].map((item) => {
                       const Icon = item.icon;

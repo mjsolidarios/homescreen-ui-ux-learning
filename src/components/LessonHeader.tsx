@@ -13,8 +13,8 @@ export function LessonHeader({ progress }: LessonHeaderProps) {
             <GraduationCap className="w-6 h-6 text-indigo-600" />
           </div>
           <div>
-            <h2 className="text-indigo-900">UI/UX Design Course</h2>
-            <p className="text-gray-600">Master the fundamentals of home screen design</p>
+            <h2 className="text-indigo-900">Designing the App Home Screen</h2>
+            <p className="text-gray-600">Design clear, accessible safety experiences</p>
           </div>
         </div>
       </div>

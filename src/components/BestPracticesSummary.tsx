@@ -65,11 +65,11 @@ export function BestPracticesSummary() {
     <div className="space-y-6">
       <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-lg p-6">
         <h3 className="mb-2">
-          Congratulations on Completing the Lesson! 🎉
+          Great work completing our lesson! 🎉
         </h3>
         <p className="text-indigo-100 mb-4">
-          You've learned the essential principles of home screen UI/UX design. Use this summary 
-          as a reference when designing your own interfaces.
+          You’ve learned principles for designing home screens where clarity and speed matter. 
+          Use this summary as a checklist when designing for your final project.
         </p>
         <div className="flex gap-2 flex-wrap">
           <Badge className="bg-white text-indigo-600">Visual Hierarchy</Badge>
@@ -136,21 +136,6 @@ export function BestPracticesSummary() {
         </div>
       </Card>
 
-      <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg p-6 text-center">
-        <h3 className="mb-2">Next Steps</h3>
-        <p className="text-purple-100 mb-4">
-          Now that you understand the principles, practice applying them to your own projects. 
-          Start with small improvements and iterate based on user feedback.
-        </p>
-        <div className="flex flex-wrap justify-center gap-3">
-          <button className="bg-white text-purple-600 px-6 py-3 rounded-lg hover:bg-purple-50 transition-colors">
-            Review Lessons
-          </button>
-          <button className="bg-purple-700 text-white px-6 py-3 rounded-lg hover:bg-purple-800 transition-colors border border-purple-500">
-            Explore Resources
-          </button>
-        </div>
-      </div>
     </div>
   );
 }

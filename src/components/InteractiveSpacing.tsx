@@ -97,31 +97,31 @@ export function InteractiveSpacing() {
       <Separator />
 
       <div>
-        <h3 className="text-indigo-900 mb-4">Example: Social Feed Post</h3>
+        <h3 className="text-indigo-900 mb-4">Example: Emergency Tip Card</h3>
         <Card className="overflow-hidden max-w-md mx-auto">
           <div className="bg-white" style={{ padding: `${cardPadding[0]}px` }}>
             {/* User info */}
             <div className="flex items-center" style={{ gap: `${elementGap[0]}px`, marginBottom: `${sectionSpacing[0]}px` }}>
               <div className="w-10 h-10 bg-gradient-to-br from-indigo-400 to-purple-400 rounded-full"></div>
               <div>
-                <p className="text-gray-900">Alex Thompson</p>
-                <p className="text-gray-500">2 hours ago</p>
+                <p className="text-gray-900">City Safety Department</p>
+                <p className="text-gray-500">Updated 2 hours ago</p>
               </div>
             </div>
 
             {/* Post content */}
             <div style={{ marginBottom: `${sectionSpacing[0]}px` }}>
               <p className="text-gray-800 mb-3">
-                Just finished an amazing hike at Sunset Peak! The views were absolutely breathtaking. 🏔️
+                Emergency Kit Tip: Keep a three‑day supply of water (1 gallon per person per day). Store in labeled, dated containers.
               </p>
-              <div className="w-full h-48 bg-gradient-to-br from-orange-400 via-pink-400 to-purple-500 rounded-lg"></div>
+              <div className="w-full h-48 bg-gradient-to-br from-blue-400 via-sky-400 to-indigo-500 rounded-lg"></div>
             </div>
 
             {/* Engagement stats */}
             <div className="flex items-center text-gray-500" style={{ gap: `${elementGap[0]}px`, marginBottom: `${sectionSpacing[0] / 2}px` }}>
-              <span>124 likes</span>
+              <span>124 saves</span>
               <span>•</span>
-              <span>18 comments</span>
+              <span>18 discussions</span>
             </div>
 
             <Separator className="my-3" />
@@ -134,7 +134,7 @@ export function InteractiveSpacing() {
                 aria-label="Like post"
               >
                 <Heart className="w-5 h-5" />
-                <span>Like</span>
+                <span>Save Tip</span>
               </button>
               <button 
                 className="flex items-center hover:text-blue-500 transition-colors min-h-[44px] px-4"
@@ -142,7 +142,7 @@ export function InteractiveSpacing() {
                 aria-label="Comment on post"
               >
                 <MessageCircle className="w-5 h-5" />
-                <span>Comment</span>
+                <span>Discuss</span>
               </button>
               <button 
                 className="flex items-center hover:text-green-500 transition-colors min-h-[44px] px-4"

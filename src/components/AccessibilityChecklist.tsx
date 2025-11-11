@@ -181,7 +181,7 @@ export function AccessibilityChecklist() {
                 </div>
                 
                 <div className="bg-blue-300 p-3 rounded">
-                  <span className="text-blue-600">Important update available</span>
+                  <span className="text-blue-600">Severe weather alert in your area</span>
                 </div>
 
                 <div className="flex gap-2">
@@ -220,8 +220,8 @@ export function AccessibilityChecklist() {
                 <div className="bg-indigo-100 border-2 border-indigo-600 p-4 rounded-lg flex items-start gap-3">
                   <div className="w-5 h-5 bg-indigo-600 rounded-full shrink-0 mt-0.5"></div>
                   <div>
-                    <p className="text-indigo-900">Important update available</p>
-                    <p className="text-indigo-700">Please update to continue using the app</p>
+                    <p className="text-indigo-900">Severe weather alert in your area</p>
+                    <p className="text-indigo-700">Seek shelter, charge devices, and avoid non‑essential travel</p>
                   </div>
                 </div>
 
@@ -230,7 +230,7 @@ export function AccessibilityChecklist() {
                     Cancel
                   </button>
                   <button className="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-600 focus:outline-none transition-colors min-h-[44px]">
-                    Update Now
+                    View Alert
                   </button>
                 </div>
               </div>

@@ -33,11 +33,11 @@ export default function App() {
       <main className="max-w-6xl mx-auto px-4 py-8">
         <div className="mb-8">
           <h1 className="text-indigo-900 mb-3">
-            Interactive Lesson: Home Screen UI/UX Design
+            Interactive Lesson: Disaster Preparedness Home Screen
           </h1>
           <p className="text-gray-600 max-w-3xl">
-            Learn how to create effective, accessible, and beautiful app home screens. 
-            This interactive lesson covers essential principles with hands-on examples you can explore.
+Learn how to create effective, accessible, and beautiful app home screens. 
+            This interactive lesson covers essential principles with hands-on examples we can explore.
           </p>
           <div className="mt-4">
             <div className="flex items-center gap-3 mb-2">
@@ -60,7 +60,7 @@ export default function App() {
           <TabsContent value="hierarchy" className="space-y-6">
             <LessonSection
               title="Visual Hierarchy"
-              description="Visual hierarchy helps users understand the importance and relationship between elements on your home screen."
+              description="In emergencies, hierarchy ensures critical information (alerts, status, actions) is surfaced first and understood instantly."
               onComplete={() => markSectionComplete('hierarchy')}
               isCompleted={completedSections.has('hierarchy')}
             >
@@ -71,7 +71,7 @@ export default function App() {
           <TabsContent value="spacing" className="space-y-6">
             <LessonSection
               title="Spacing & Layout"
-              description="Proper spacing creates breathing room, improves readability, and makes your interface feel organized and professional."
+              description="Consistent spacing improves scanability under stress—making checklists, alerts, and resources easy to parse and act on."
               onComplete={() => markSectionComplete('spacing')}
               isCompleted={completedSections.has('spacing')}
             >
@@ -82,7 +82,7 @@ export default function App() {
           <TabsContent value="navigation" className="space-y-6">
             <LessonSection
               title="Navigation Patterns"
-              description="Effective navigation helps users find what they need quickly and understand where they are in your app."
+              description="Preparedness apps need clear, consistent navigation to reach plans, supplies, shelters, and live alerts fast."
               onComplete={() => markSectionComplete('navigation')}
               isCompleted={completedSections.has('navigation')}
             >
@@ -93,7 +93,7 @@ export default function App() {
           <TabsContent value="accessibility" className="space-y-6">
             <LessonSection
               title="Accessibility Principles"
-              description="Accessible design ensures everyone can use your app, regardless of their abilities or the devices they use."
+              description="Accessible emergency information can save lives—ensure alerts, actions, and maps work for everyone."
               onComplete={() => markSectionComplete('accessibility')}
               isCompleted={completedSections.has('accessibility')}
             >
@@ -104,7 +104,7 @@ export default function App() {
           <TabsContent value="summary" className="space-y-6">
             <LessonSection
               title="Best Practices Summary"
-              description="A comprehensive checklist of best practices for designing effective home screens."
+              description="A checklist tailored for high‑stakes home screens where clarity, speed, and accessibility are essential."
               onComplete={() => markSectionComplete('summary')}
               isCompleted={completedSections.has('summary')}
             >
@@ -113,6 +113,11 @@ export default function App() {
           </TabsContent>
         </Tabs>
       </main>
+      <footer className="bg-white border-t border-gray-200">
+        <div className="max-w-6xl mx-auto px-4 py-4 text-center text-gray-600">
+          mjsolidarios@wvsu.edu.ph
+        </div>
+      </footer>
     </div>
   );
 }
