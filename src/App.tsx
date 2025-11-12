@@ -106,31 +106,31 @@ Learn how to create effective, accessible, and beautiful app home screens.
               <dl className="space-y-3 text-gray-800">
                 <div>
                   <dt className="font-semibold">WCAG (Web Content Accessibility Guidelines)</dt>
-                  <dd className="text-gray-600">International standards that define how to make web content more accessible to people with disabilities (e.g., contrast, keyboard support, reflow).</dd>
+                  <dd className="text-gray-600">International standards that define how to make web content more accessible to people with disabilities (e.g., contrast, keyboard support, reflow). <a className="text-indigo-600 underline" href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank" rel="noreferrer noopener">Learn more</a>.</dd>
                 </div>
                 <div>
                   <dt className="font-semibold">ARIA (Accessible Rich Internet Applications)</dt>
-                  <dd className="text-gray-600">Attributes that add semantic meaning and state to UI controls so assistive technologies can understand them (e.g., aria-label, role, aria-expanded).</dd>
+                  <dd className="text-gray-600">Attributes that add semantic meaning and state to UI controls so assistive technologies can understand them (e.g., aria-label, role, aria-expanded). <a className="text-indigo-600 underline" href="https://www.w3.org/TR/wai-aria-1.2/" target="_blank" rel="noreferrer noopener">Learn more</a>.</dd>
                 </div>
                 <div>
                   <dt className="font-semibold">Focus Indicator</dt>
-                  <dd className="text-gray-600">A visible outline or style that shows which element is currently focused when navigating via keyboard or assistive tech.</dd>
+                  <dd className="text-gray-600">A visible outline or style that shows which element is currently focused when navigating via keyboard or assistive tech. <a className="text-indigo-600 underline" href="https://www.w3.org/WAI/WCAG22/Understanding/focus-visible" target="_blank" rel="noreferrer noopener">Learn more</a>.</dd>
                 </div>
                 <div>
                   <dt className="font-semibold">Contrast Ratio</dt>
-                  <dd className="text-gray-600">The difference in luminance between foreground and background colors; body text should meet at least 4.5:1 for readability.</dd>
+                  <dd className="text-gray-600">The difference in luminance between foreground and background colors; body text should meet at least 4.5:1 for readability. <a className="text-indigo-600 underline" href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum" target="_blank" rel="noreferrer noopener">Learn more</a>.</dd>
                 </div>
                 <div>
                   <dt className="font-semibold">Semantic HTML</dt>
-                  <dd className="text-gray-600">Using elements like header, nav, main, button, and h1–h6 to convey meaning and structure, improving navigation for assistive tools.</dd>
+                  <dd className="text-gray-600">Using elements like header, nav, main, button, and h1–h6 to convey meaning and structure, improving navigation for assistive tools. <a className="text-indigo-600 underline" href="https://html.spec.whatwg.org/multipage/semantics.html#semantics" target="_blank" rel="noreferrer noopener">Learn more</a>.</dd>
                 </div>
                 <div>
                   <dt className="font-semibold">Screen Reader</dt>
-                  <dd className="text-gray-600">Software that reads on-screen content aloud or converts it to braille; depends on semantics, labels, and proper focus order.</dd>
+                  <dd className="text-gray-600">Software that reads on-screen content aloud or converts it to braille; depends on semantics, labels, and proper focus order. <a className="text-indigo-600 underline" href="https://www.w3.org/WAI/people-use-web/screen-readers/" target="_blank" rel="noreferrer noopener">Learn more</a>.</dd>
                 </div>
                 <div>
                   <dt className="font-semibold">Touch Target Size</dt>
-                  <dd className="text-gray-600">Recommended minimum area (about 44×44 px) for interactive elements to reduce errors and improve accessibility on touch devices.</dd>
+                  <dd className="text-gray-600">Recommended minimum area (about 44×44 px) for interactive elements to reduce errors and improve accessibility on touch devices. <a className="text-indigo-600 underline" href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum" target="_blank" rel="noreferrer noopener">Learn more</a>.</dd>
                 </div>
               </dl>
             </Card>
